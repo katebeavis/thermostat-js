@@ -21,7 +21,6 @@ $(document).ready(function() {
     thermo.resetButton();
     $('#temperature').text(thermo.temperature);
     $('#temperature').css('color', thermo.energyRating());
-
   });
 
   $('.powerSave').click( function() {
@@ -29,7 +28,5 @@ $(document).ready(function() {
     $('#power').text(thermo.isPowerSaving);
     $('#temperature').text(thermo.temperature);
   });
-
-
 
 });
