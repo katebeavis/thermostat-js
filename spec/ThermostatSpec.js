@@ -7,4 +7,10 @@ describe ("Thermostat", function() {
     expect(thermo.temperature).toEqual (20);
   });
 
+  it ("should be able to have it's temperature increased", function() {
+  	var thermo = new Thermostat;
+  	thermo.increase();
+  	expect(thermo.temperature).toEqual (21);
+  });
+
 });
