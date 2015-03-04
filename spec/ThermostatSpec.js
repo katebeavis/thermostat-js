@@ -39,10 +39,20 @@ describe ("Thermostat", function() {
     expect(thermo.isPowerSaving).toBe (false);
   });
 
-    it("should be able to turn power saving mode on", function() {
+   it("should be able to turn power saving mode on", function() {
     thermo.switchPowerSaving();
     thermo.switchPowerSaving();
-    expect(thermo.isPowerSaving).toBe (true);
+   	expect(thermo.isPowerSaving).toBe (true);
   });
+
+   it("should set a maximum temperature of 25 degrees for powersaving", function() {
+    thermo.increase(6);
+    expect(thermo.temperature).toEqual (25);
+  });
+
+   it("should set the temperature to 20 when reset", function() {
+   	thermo.reset
+   	expect(thermo.temperature).toEqual (20);
+   });
 
 });
