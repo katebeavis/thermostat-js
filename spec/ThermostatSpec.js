@@ -30,4 +30,19 @@ describe ("Thermostat", function() {
   	expect(thermo.temperature).toEqual (10);
   });
 
+  it("should start with power saving mode on", function() {
+    expect(thermo.isPowerSaving).toBe (true);
+  });
+
+  it("should be able to turn power saving mode off", function() {
+    thermo.switchPowerSaving();
+    expect(thermo.isPowerSaving).toBe (false);
+  });
+
+    it("should be able to turn power saving mode on", function() {
+    thermo.switchPowerSaving();
+    thermo.switchPowerSaving();
+    expect(thermo.isPowerSaving).toBe (true);
+  });
+
 });

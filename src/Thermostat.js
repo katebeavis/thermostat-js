@@ -1,5 +1,6 @@
 var Thermostat = function() {
   this.temperature = 20;
+  this.isPowerSaving = true;
 };
 
 Thermostat.prototype.increase = function() {
@@ -11,4 +12,8 @@ Thermostat.prototype.decrease = function(number) {
   this.temperature -= number;
   if (this.temperature < 10)
   	this.temperature = 10;
+};
+
+Thermostat.prototype.switchPowerSaving = function() {
+  this.isPowerSaving = !this.isPowerSaving;
 };
