@@ -33,3 +33,18 @@ Thermostat.prototype.switchPowerSaving = function() {
 Thermostat.prototype.resetButton = function() {
   this.temperature = 20;
 };
+
+Thermostat.prototype.energyRating = function() {
+  if (this.temperature < 18) {
+    return 'green';
+  }
+
+  if (this.temperature < 25) {
+    return 'orange';
+  }
+
+  if (this.temperature > 24) {
+    return 'red';
+  }
+
+};
