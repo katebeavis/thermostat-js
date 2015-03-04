@@ -14,4 +14,16 @@ $(document).ready(function() {
     $('#temperature').text(thermo.temperature);
   });
 
+  $('.reset').click( function() {
+    thermo.resetButton();
+    $('#temperature').text(thermo.temperature);
+  });
+
+  $('.powerSave').click( function() {
+    thermo.switchPowerSaving();
+    $('#power').text(thermo.isPowerSaving);
+    $('#temperature').text(thermo.temperature);
+
+  });
+
 });
