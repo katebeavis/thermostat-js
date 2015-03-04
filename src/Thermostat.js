@@ -6,8 +6,14 @@ var Thermostat = function() {
 Thermostat.prototype.increase = function(number) {
 	number = number || 1;
 	this.temperature += number;
-	if (this.temperature > 25)
+
+if (this.isPowerSaving)
+  if (this.temperature > 25)
 		this.temperature = 25;
+
+if (this.temperature > 32)
+  this.temperature = 32;
+
 };
 
 Thermostat.prototype.decrease = function(number) {
@@ -19,4 +25,8 @@ Thermostat.prototype.decrease = function(number) {
 
 Thermostat.prototype.switchPowerSaving = function() {
   this.isPowerSaving = !this.isPowerSaving;
+};
+
+Thermostat.prototype.resetButton = function() {
+  this.temperature = 20;
 };

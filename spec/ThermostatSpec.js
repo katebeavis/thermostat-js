@@ -50,8 +50,15 @@ describe ("Thermostat", function() {
     expect(thermo.temperature).toEqual (25);
   });
 
+   it("should set a maximum temperatureof 32 degrees when powersaving is off", function() {
+    thermo.switchPowerSaving();
+    thermo.increase(13);
+    expect(thermo.temperature).toEqual (32);
+   });
+
    it("should set the temperature to 20 when reset", function() {
-   	thermo.reset
+   	thermo.increase();
+    thermo.resetButton();
    	expect(thermo.temperature).toEqual (20);
    });
 
