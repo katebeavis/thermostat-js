@@ -20,6 +20,8 @@ $(document).ready(function() {
   $('.reset').click( function() {
     thermo.resetButton();
     $('#temperature').text(thermo.temperature);
+    $('#temperature').css('color', thermo.energyRating());
+
   });
 
   $('.powerSave').click( function() {
