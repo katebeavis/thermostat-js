@@ -1,37 +1,42 @@
 var Thermostat = function() {
   this.temperature = 20;
   this.isPowerSaving = true;
+  this.powerSavingOnLimit = 25;
+  this.powerSavingOffLimit = 32;
+  this.minimumTemp = 10;
+  this.defaultTempChange = 1;
+  this.defaultTemp = this.temperature;
 };
 
 Thermostat.prototype.increase = function(number) {
-	number = number || 1;
+	number = number || this.defaultTempChange;
 	this.temperature += number;
 
 if (this.isPowerSaving)
-  if (this.temperature > 25)
-		this.temperature = 25;
+  if (this.temperature > this.powerSavingOnLimit)
+		this.temperature = this.powerSavingOnLimit;
 
-if (this.temperature > 32)
-  this.temperature = 32;
+if (this.temperature > this.powerSavingOffLimit)
+  this.temperature = this.powerSavingOffLimit;
 
 };
 
 Thermostat.prototype.decrease = function(number) {
-	number = number || 1;
+	number = number || this.defaultTempChange;
   this.temperature -= number;
-  if (this.temperature < 10)
-  	this.temperature = 10;
+  if (this.temperature < this.minimumTemp)
+  	this.temperature = this.minimumTemp;
 };
 
 Thermostat.prototype.switchPowerSaving = function() {
   this.isPowerSaving = !this.isPowerSaving;
   if (this.isPowerSaving)
-  	if (this.temperature > 25)
-  		this.temperature = 25;
+  	if (this.temperature > this.powerSavingOnLimit)
+  		this.temperature = this.powerSavingOnLimit;
 };
 
 Thermostat.prototype.resetButton = function() {
-  this.temperature = 20;
+  this.temperature = this.defaultTemp;
 };
 
 Thermostat.prototype.energyRating = function() {
