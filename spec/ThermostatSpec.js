@@ -3,7 +3,7 @@ describe ("Thermostat", function() {
   var thermo;
 
   beforeEach(function() {
-    thermo = new Thermostat;
+    thermo = new Thermostat();
   });
 
   it ("should have a temperature of 20 degrees to start", function() {
@@ -26,7 +26,7 @@ describe ("Thermostat", function() {
   });
 
   it("should have a minimum temperature of 10", function() {
-  	thermo.decrease(11)
+  	thermo.decrease(11);
   	expect(thermo.temperature).toEqual (10);
   });
 
