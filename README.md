@@ -13,7 +13,7 @@ It has a range of temperatures from 10 - 32 and has the following set of rules a
 ## Objectives
 To understand jQuery and how it works in the DOM.
 
-I really enjoyed this project as I felt we got to see just a little peek of how powerful Javascript can be when combined with jQuery. It's exciting to think of all the possibilities that could be done with it, and how simple static websites can be transformed into dynamic ones with a few lines of code!
+I really enjoyed this project as I felt we got to see just a little peek of how powerful Javascript can be when combined with jQuery. It's exciting to think of all the possibilities that it has, and how simple static websites can be transformed into dynamic ones with a few lines of code!
 
 ## Screenshots
 <div align="center">
