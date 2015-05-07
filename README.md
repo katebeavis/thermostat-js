@@ -20,10 +20,10 @@ I really enjoyed this project as I felt we got to see just a little peek of how 
   <img width="90%" src="public/images/orange-thermo.png">
 </div>
 <div align="center">
-  <img width="90%" src="public/images/red-thermo.png">
+  <img width="45%" src="public/images/red-thermo.png">
 </div>
 <div align="center">
-  <img width="90%" src="public/images/green-thermo.png">
+  <img width="45%" src="public/images/green-thermo.png">
 </div>
 
 My design was based on that of one of my coaches, Roi Driscoll
